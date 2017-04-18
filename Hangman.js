@@ -19,6 +19,10 @@ function getWord(){
           var terms = ["function", "variable", "string", "number", "boolean", "Qunit", "Math", "camelcase", "cascading style sheets", "binary", "hexadecimal", "bootstrap", "github", "modulus", "html", "javascript"];
           var word = terms[Math.floor(Math.random() * terms.length)];
 }
-function hideWord(){}
+function hideWord(){
+    var characters = word.length;
+
+
+}
 function showLives(){}
 
