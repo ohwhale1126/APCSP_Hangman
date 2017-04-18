@@ -106,7 +106,7 @@ word = terms[Math.floor(Math.random() * terms.length)];
     result();
     comments();
 
-  ];
+  };
 
   play();
 
