@@ -99,7 +99,7 @@ word = terms[Math.floor(Math.random() * terms.length)];
     console.log(word);
     buttons();
 
-    geusses = [ ];
+    guesses = [ ];
     lives = 10;
     counter = 0;
     space = 0;
