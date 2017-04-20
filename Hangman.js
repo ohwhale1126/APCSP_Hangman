@@ -22,5 +22,9 @@ window.onload = function () {
             }
             return hiddenWord;
         }
+    //count lives and display corresponding image
+    function selectImage(){
+
+    }
 
         function showLives() {}
