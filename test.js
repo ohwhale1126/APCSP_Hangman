@@ -1,4 +1,5 @@
-QUnit.test("Test the getAreaCode function.", function (assert) {
-    var = kjhgy
-    assert.deepEqual(result, "415", "Valid area code test passed.");
+QUnit.test("Test the hideWord function.", function (assert) {
+    var chosenWord = "dog"
+    var result = hideWord(chosenWord);
+    assert.deepEqual(result, "---", "HideWord code test passed.");
 });
