@@ -5,7 +5,7 @@ window.onload = function () {
         var guess; // Geuss
         var wrongLetter = []; //incorrect guess
         var correctLetter = []; //correct guess
-        var lives; // Lives
+        var lives=10; // Lives
         //1. get word 2. hide word 3.the user guesses incorrect 3.1. subtract a life 3.2.add to incorrect array 3.3. add to canvas ||| 4. user guesses correct 4.1 change correct dash to letter 4.2 add to correct letter array
         function hideWord() {
             var characters = word.length;
@@ -15,7 +15,44 @@ window.onload = function () {
             return hiddenWord;
         }
         //count lives and display corresponding image
-        function selectImage() {
+    //ALYSSA READ THIS: this function Should Work but I cant test it rn bcause the whole lives thing isnt working rn so ¿?¿?¿?
+function showImage(){
+    var image;
+        if (lives == 10){
+            var image == "<img src ='hangman/hangman1.png'/>";
+
+        }
+        if (lives == 9){
+             var image == "<img src ='hangman/hangman2.png'/>";
+        };
+        if (lives == 8){
+             var image == "<img src ='hangman/hangman3.png'/>";
+        };
+        if (lives == 7){
+             var image == "<img src ='hangman/hangman4.png'/>";
+        };
+        if (lives == 6){
+            var image == "<img src ='hangman/hangman5.png'/>";};
+        if (lives == 5){
+             var image == "<img src ='hangman/hangman6.png'/>";
+        };
+        if (lives == 4){
+             var image == "<img src ='hangman/hangman7.png'/>";
+        };
+        if (lives == 3){
+             var image == "<img src ='hangman/hangman8.png'/>";
+        };
+        if (lives == 2){
+             var image == "<img src ='hangman/hangman9.png'/>";
+        };
+        if (lives == 1){
+             var image == "<img src ='hangman/hangman10.png'/>";
+        };
+        if (lives == 0){
+             var image == "<img src ='hangman/hangman11.png'/>";
+        };
+
+}
             function getWord() {
                 var terms = ["function", "variable", "string", "number", "boolean", "Qunit", "Math", "camelcase", "cascading style sheets", "binary", "hexadecimal", "bootstrap", "github", "modulus", "html", "javascript"];
                 var word = terms[Math.floor(Math.random() * terms.length)];
