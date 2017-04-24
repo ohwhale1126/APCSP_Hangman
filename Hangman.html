@@ -5,6 +5,7 @@
 <head>
     <title>Hangman</title>
     <script src="Hangman.js"></script>
+    <script src="Hangman.css"></script>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> </head>
 
@@ -14,22 +15,23 @@
         <h2>The APCSP Hangman Game</h2>
         <h3>TOPIC: AP Computer Science Principles Terms-JAVASCRIPT TERMS </h3>
         <h4>Let the guessing begin!</h4>
-        <table align="center">
+        <table align="center" style="width:80%" id="table">
             <tr>
                 <th>
                     <div class="container" align="center">
                         <input type="text" class="text-right" id="screen"> </div>
+                    <p>Number of lives here</p>
+                    <script>
+                        document.write(myLives);
+                    </script>
+                    <p>WORDS HERE</p>
                 </th>
                 <th align="center">
-                    <div class="container">
-                        <button type="button" class="btn btn-success" onclick="">Guess</button>
-                    </div>
+                    <p>IMAGE OF HANGMAN HERE</p>
                 </th>
+                <th align="center">BUTTONS HERE</th>
             </tr>
         </table>
-        <p>Number of lives here</p>
-        <p></p>
-        <p>Hangman image/canvcas here</p>
         <p>
             <div class="container">
                 <button id="reset" class="btn btn-success btn-xs">Play again</button>

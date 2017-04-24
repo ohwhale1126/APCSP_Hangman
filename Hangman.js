@@ -1,9 +1,5 @@
 window.onload = function () {
 
-  var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-        'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-        't', 'u', 'v', 'w', 'x', 'y', 'z'];
-
   var terms = [ ];
   var word ;              // Selected word
   var hiddenWord;         //selected word with letters replaced by "-"
@@ -20,5 +16,39 @@ function getWord(){
           var word = terms[Math.floor(Math.random() * terms.length)];
 }
 function hideWord(){}
-function showLives(){}
 
+function getLetter(n) {
+    var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+        'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+        't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    try {
+        if (areaCode.length == 3 && Number(areaCode)) {
+            return n;
+        }
+        else {
+            throw new Error("Invalid area code: " + areaCode);
+        }
+    }
+    catch (error) {
+        throw new Error("Invalid phone number: " + error.message);
+    }
+}
+/**
+ * Displays the area code for an inputted phone number
+ * @param {string} inputId  The element id for the text box
+ * @return {string} outputId; Displays the area code to user
+ */
+function displayLetter(inputId, outputId) {
+    var outputText = "";
+    var phoneNum = document.getElementById(inputId).value;
+    // Now try to get the code
+    try {
+        var letter = getLetter(n);
+        outputText = "Your area code is " + letter;
+    }
+    catch (error) {
+        console.log(error.message);
+        outputText = error.message;
+    }
+    document.getElementById(outputId).innerHTML = outputText;
+}
