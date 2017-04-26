@@ -57,9 +57,11 @@ function evaluateGuess(){
 
     if (word.includes(guess)){
         correctLetter.push(guess);
+
     };
     else {
         wrongLetter.push(guess);
+         lives--;
     }
 }
 
