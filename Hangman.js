@@ -5,12 +5,13 @@ var guess; // Geuss
 var wrongLetter = []; //incorrect guess
 var correctLetter = []; //correct guess
 var lives = 10; // Lives
-//1. get word 2. hide word 3.the user guesses incorrect 3.1. subtract a life 3.2.add to incorrect array 3.3. add to canvas ||| 4. user guesses correct 4.1 change correct dash to letter 4.2 add to correct letter array
+//1. get word ✔︎ 2. hide word 3.the user guesses incorrect ✔︎3.1. subtract a life✔︎ 3.2.add to incorrect array ✔︎3.3. add to canvas ✔︎||| 4. user guesses correct 4.1 change correct dash to letter 4.2 add to correct letter array✔︎
 
 //hideword. word= dog. take dog, change each letter into '-'. if number of characters in dog is greater than one, push '-' into a new array . if length is less than one stop function
+//
 function hideWord() {
-    var characters = word.length;
-    for (characters >= 1) {
+
+    for (word.length >= 1) {
         var hiddenWord = word.replace(/\s/g, "-");
     }
     return hiddenWord;
@@ -62,7 +63,7 @@ function evaluateGuess(){
     else {
         wrongLetter.push(guess);
          lives--;
-    }
+    };
 }
 
 function getWord() {
