@@ -1,6 +1,6 @@
 var terms = [];
 var word; // Selected word
-var hiddenWord; //selected word with letters replaced by "-"
+var hiddenWord = []; //selected word with letters replaced by "-"
 var guess; // Geuss
 var wrongLetter = []; //incorrect guess
 var correctLetter = []; //correct guess
@@ -11,8 +11,8 @@ var lives = 10; // Lives
 //
 function hideWord() {
 
-    for (word.length >= 1) {
-        var hiddenWord = word.replace(/\s/g, "-");
+    for(word.length >= 1) {
+        hiddenWord.push("-");
     }
     return hiddenWord;
 }
@@ -58,11 +58,13 @@ function evaluateGuess(){
 
     if (word.includes(guess)){
         correctLetter.push(guess);
+        return "correct";
 
     };
     else {
         wrongLetter.push(guess);
          lives--;
+        return "incorrect";
     };
 }
 
