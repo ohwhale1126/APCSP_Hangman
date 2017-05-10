@@ -34,3 +34,46 @@ function showNewWord() {
         guessField.appendChild(letter);
     }
 }
+/**
+ * [checks if the the letter provided by the user matches one or more of the letters in the word]
+ * @author Gemma
+ */
+function checkCharacter() {
+    var a = document.blank; //check .rateformular - what's it's function
+    var b = a.elements["newCharacter"];
+    var character = b.value; // the letter provided by the user
+    character = character.toUpperCase();
+    for (var i = 0; i < wordChooser.length; i++) {
+        if (wordChooser[i] === character) {
+            newWord[i] = character + " ";
+            var goal = true;
+        }
+        b.value = "";
+    }
+    //deletes the guessField and replaces guessField with new term
+    var guessField = document.getElementById("guessField");
+    guessField.innerHTML = "";
+    showNewWord();
+    if (!goal) {
+        var guessedLetter = document.getElementById("guessedLetter");
+        var letter = document.createTextNode(" " + character);
+        guessedLetter.appendChild(letter);
+        error++;
+        var hangman = document.getElementById("hangman");
+        hangman.src = "hangmanpics/hangman" + error + ".png";
+    }
+    //checks if all letters have been found
+    var end = true;
+    for (var i = 0; i < newWord.length; i++) {
+        if (newWord[i] === "_ ") {
+            end = false; //fertig = finished/end
+        }
+    }
+    if (end) {
+        window.alert("You win!");
+    }
+    //once you got six wrong letters, you lose
+    if (error === 10) {
+        window.alert("You lose :( .");
+    }
+}
