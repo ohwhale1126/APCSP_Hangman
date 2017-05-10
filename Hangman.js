@@ -77,3 +77,11 @@ function checkCharacter() {
         window.alert("You lose :( .");
     }
 }
+/**
+ * [[calls showNewWord function]]
+ * @author Gemma
+ */
+function init() {
+    showNewWord();
+}
+window.onload = init;
