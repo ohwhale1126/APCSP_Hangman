@@ -16,71 +16,24 @@
         <h2>The APCSP Hangman Game</h2>
         <h3>TOPIC: AP Computer Science Principles Terms-JAVASCRIPT TERMS </h3>
         <h4>Let the guessing begin!</h4>
-        <table align="center" id="table" id="ex1">
-            <tr>
-                <th align="center" width="33.33%">
-                    <p align="center">WORDS APPEAR HERE</p>
-                    <div class="container" align="center">
-                        <p align="center"> Number of lives here (by using canvas instead)</p>
-                        <p>
-                            <script>
-                                //document.write(myLives);
-                            </script>
-                        </p>
-                        <p align="center">MISSED WORDS HERE (Maybe not needed)</p>
-                </th>
-                <th align="center" width="33.33%">
+        <div class="container" align="center">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p align="center"> Number of lives here (by using canvas instead)</p>
+                    <p align="center">MISSED WORDS HERE (Maybe not needed)</p>
+                </div>
+                <div class="col-sm-6">
                     <p align="center">IMAGE OF HANGMAN HERE</p>
                     <script>
                         document.write(showImage());
                     </script>
-                </th>
-                <th align="center" width="33.33%">
-                    <p align="left">Choose letter:</p>
-                    <p align="center">
-                        <button type="button " class="btn btn-info " onclick=" ">A</button>
-                        <button type="button " class="btn btn-info " onclick=" ">B</button>
-                        <button type="button " class="btn btn-info " onclick=" ">C</button>
-                        <button type="button " class="btn btn-info " onclick=" ">D</button>
-                        <button type="button " class="btn btn-info " onclick=" ">E</button>
-                        <button type="button " class="btn btn-info " onclick=" ">F</button>
-                    </p>
-                    <p align="center">
-                        <button type="button " class="btn btn-info " onclick=" ">G</button>
-                        <button type="button " class="btn btn-info " onclick=" ">H</button>
-                        <button type="button " class="btn btn-info " onclick=" ">I</button>
-                        <button type="button " class="btn btn-info " onclick=" ">J</button>
-                        <button type="button " class="btn btn-info " onclick=" ">K</button>
-                        <button type="button " class="btn btn-info " onclick=" ">L</button>
-                    </p>
-                    <p align="center">
-                        <button type="button " class="btn btn-info " onclick=" ">M</button>
-                        <button type="button " class="btn btn-info " onclick=" ">N</button>
-                        <button type="button " class="btn btn-info " onclick=" ">O</button>
-                        <button type="button " class="btn btn-info " onclick=" ">P</button>
-                        <button type="button " class="btn btn-info " onclick=" ">Q</button>
-                        <button type="button " class="btn btn-info " onclick=" ">R</button>
-                    </p>
-                    <p align="center">
-                        <button type="button " class="btn btn-info " onclick=" ">S</button>
-                        <button type="button " class="btn btn-info " onclick=" ">T</button>
-                        <button type="button " class="btn btn-info " onclick=" ">U</button>
-                        <button type="button " class="btn btn-info " onclick=" ">V</button>
-                        <button type="button " class="btn btn-info " onclick=" ">W</button>
-                        <button type="button " class="btn btn-info " onclick=" ">X</button>
-                    </p>
-                    <p align="center">
-                        <button type="button " class="btn btn-info " onclick=" ">Y</button>
-                        <button type="button " class="btn btn-info " onclick=" ">Z</button>
-                    </p>
-                </th>
-            </tr>
-        </table>
-        <p>
-            <div class="container ">
-                <button id="reset " class="btn btn-success btn-xs ">Play again</button>
+                </div>
             </div>
-        </p>
+            <p>
+                <div class="container ">
+                    <button id="reset " class="btn btn-success btn-xs ">Play again</button>
+                </div>
+            </p>
     </form>
 </body>
 
