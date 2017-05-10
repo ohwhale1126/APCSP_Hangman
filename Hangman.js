@@ -23,3 +23,14 @@ console.log(wordChooser);
 for (var i = 0; i < newWord.length; i++) {
     newWord[i] = "_ ";
 }
+/**
+ * [shows the guessField]
+ * @author [[Alyssa]]
+ */
+function showNewWord() {
+    for (var i = 0; i < newWord.length; i++) {
+        var guessField = document.getElementById("guessField");
+        var letter = document.createTextNode(newWord[i]);
+        guessField.appendChild(letter);
+    }
+}
