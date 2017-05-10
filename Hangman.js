@@ -66,7 +66,7 @@ function checkCharacter() {
     var end = true;
     for (var i = 0; i < newWord.length; i++) {
         if (newWord[i] === "_ ") {
-            end = false; //fertig = finished/end
+            end = false;
         }
     }
     if (end) {
