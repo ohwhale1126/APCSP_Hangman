@@ -3,10 +3,70 @@
 <head>
     <title>Hangman</title>
     <script src="Hangman.js"></script>
-    <script src="Hangman.css"></script>
     <script src="hangman/"></script>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href='//fonts.googleapis.com/css?family=Chewy' rel='stylesheet'>
+    <style>
+        h2 {
+            color: black;
+            font-family: 'Chewy';
+            font-size: 300%;
+        }
+
+        h4 {
+            color: black;
+            font-family: Comic Sans MS;
+            font-size: 150%;
+        }
+
+        h5 {
+            color: black;
+            font-family: Comic Sans MS;
+            font-size: 125%;
+        }
+
+        body {
+            background-color: azure;
+        }
+
+        p {
+            color: black;
+            font-family: Comic Sans MS;
+            font-size: 100%;
+            font-weight: bold;
+        }
+
+        input[type=text] {
+            width: 8%;
+            padding: 4px 5px;
+            margin: 4px 0;
+            border: 1.5px solid rgb(68, 157, 222);
+            border-radius: 2px;
+        }
+
+        input[type=button] {
+            background-color: rgb(68, 157, 222);
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            margin: 2px 1px;
+            cursor: pointer;
+        }
+
+        input[type=button1] {
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            padding: 4px 8px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
 
 <body font-family="Helvetica">
     <form align="center">
@@ -17,7 +77,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <h4>AP Computer Science Principles Terms-JAVASCRIPT TERMS </h4></div>
+                    <h4>AP Computer Science Principles Terms<br>JAVASCRIPT TERMS </h4></div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
@@ -28,24 +88,26 @@
     <form align="center" name="blank">
         <div class="container" align="center">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <br>
                     <br>
                     <br>
                     <p id="guessField"></p>
                     <input name="newCharacter" type="text" size="1" maxlength="1">
-                    <input name="ratebutton" type="button" value="Guess" onClick="checkCharacter()">
-                    <br>
-                    <br>
-                    <p><u>Wrong Letters</u></p>
-                    <p id="guessedLetter" text-align="left"> </p>
-                    <br> </div>
-                <div class="col-sm-6">
+                    <input name="ratebutton" type="button" value="Guess" class="btn btn-sucess btn-md" onClick="checkCharacter()"> </div>
+                <div class="col-sm-4">
                     <p><img src="hangmanpics/hangman1.png" alt="hangman picture here" width="200" height="200" id="hangman"></p>
+                </div>
+                <div class="col-sm-4">
+                    <br>
+                    <br>
+                    <br>
+                    <p>Wrong Letters</p>
+                    <p id="guessedLetter"> </p>
                 </div>
             </div>
             <div class="container">
-                <input name="refresh" type="button" class="btn btn-primary btn-md" value="New Game" onClick="location.reload()"> </div>
+                <input name="refresh" type="button1" class="btn btn-primary btn-md" value="New Game" onClick="location.reload()"> </div>
         </div>
     </form>
 </body>
