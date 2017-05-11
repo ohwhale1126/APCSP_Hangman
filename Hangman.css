@@ -1,8 +1,8 @@
-#table td {
-    border: 1px solid;
-    padding: 8px;
-}
-
-table.ex1 {
-    table-layout: auto;
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid red;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
