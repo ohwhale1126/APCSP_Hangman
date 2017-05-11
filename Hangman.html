@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0092)file:///Network/Servers/srhsdata.srcs.loc/srstudents/ae01759/Downloads/calculator_start.html -->
 <html lang="en">
 
 <head>
@@ -10,28 +9,44 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> </head>
 
-<body>
-    <h1 align="center">Hangman</h1>
+<body font-family="Helvetica">
     <form align="center">
-        <h2>The APCSP Hangman Game</h2>
-        <h3>TOPIC: AP Computer Science Principles Terms-JAVASCRIPT TERMS </h3>
-        <h4>Let the guessing begin!</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>The APCSP Hangman Game</h2></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>AP Computer Science Principles Terms-JAVASCRIPT TERMS </h4></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h5>Let the guessing begin!</h5></div>
+            </div>
+        </div>
+    </form>
+    <form align="center" name="blank">
         <div class="container" align="center">
             <div class="row">
                 <div class="col-sm-6">
-                    <p align="center"> Number of lives here (by using canvas instead)</p>
-                    <p align="center">MISSED WORDS HERE (Maybe not needed)</p>
-                </div>
+                    <br>
+                    <br>
+                    <br>
+                    <p id="guessField"></p>
+                    <input name="newCharacter" type="text" size="1" maxlength="1">
+                    <input name="ratebutton" type="button" value="Guess" onClick="checkCharacter()">
+                    <br>
+                    <br>
+                    <p><u>Wrong Letters</u></p>
+                    <p id="guessedLetter" text-align="left"> </p>
+                    <br> </div>
                 <div class="col-sm-6">
-                    <p align="center">IMAGE OF HANGMAN HERE</p>
-                    <script>
-                        document.write(showImage());
-                    </script>
+                    <p><img src="hangmanpics/hangman1.png" alt="hangman picture here" width="200" height="200" id="hangman"></p>
                 </div>
             </div>
-            <div class="container ">
-                <button id="reset " class="btn btn-success btn-xs ">Play again</button>
-            </div>
+            <div class="container">
+                <input name="refresh" type="button" class="btn btn-primary btn-md" value="New Game" onClick="location.reload()"> </div>
     </form>
 </body>
 

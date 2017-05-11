@@ -56,7 +56,7 @@ function checkCharacter() {
     showNewWord();
     if (!goal) {
         var guessedLetter = document.getElementById("guessedLetter");
-        var letter = document.createTextNode(" " + character);
+        var letter = document.createTextNode(character + " ");
         guessedLetter.appendChild(letter);
         error++;
         var hangman = document.getElementById("hangman");
@@ -73,7 +73,7 @@ function checkCharacter() {
         window.alert("You win!");
     }
     //once you got six wrong letters, you lose
-    if (error === 10) {
+    if (error === 11) {
         window.alert("You lose :( .");
     }
 }
